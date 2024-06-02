@@ -1,9 +1,11 @@
 const initialState = {
-  name: "Mowglee"
+  fName: "Mowglee",
+  lName: "Patel",
+  address: "Chicago, IL"
 };
 
 const reducer = (state = initialState, action) => {
-    
+
   return state;
 };
 
