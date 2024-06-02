@@ -1,10 +1,10 @@
-
 const initialState = {
-    name : "Mowglee"
-}
+  name: "Mowglee"
+};
 
 const reducer = (state = initialState, action) => {
     
-}
+  return state;
+};
 
 export default reducer;
