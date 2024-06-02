@@ -1,5 +1,6 @@
 import "./App.css";
 import FirstComponent from "./FirstComponent";
+import IncrementComponent from "./IncrementComponent";
 import SecondComponent from "./SecondComponent";
 import ThirdComponent from "./ThirdComponent";
 
@@ -13,6 +14,8 @@ function App() {
         <SecondComponent />
         <hr />
         <ThirdComponent />
+        <hr/>
+        <IncrementComponent />
       </div>
     </>
   );

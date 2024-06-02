@@ -11,11 +11,11 @@ const FirstComponent = () => {
         <h3>First Component</h3>
         <p>
           {" "}
-          Name in First Component as local Variable : <h2>{name}</h2>
+          Name in First Component as local Variable : <b>{name}</b>
         </p>
         <p>
           {" "}
-          Name in First Component as local Variable : <h2>{fName}</h2>
+          Name in First Component as local Variable : <b>{fName}</b>
         </p>
       </div>
     </>
