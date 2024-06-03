@@ -50,7 +50,7 @@ const saveLocalStorage = (item) => {
 
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Movies App</h1>
+      <h1 style={{ textAlign: "center" }}>Streamify</h1>
       <div className="container-fluid">
         <div className="row d-flex align-items-center mt-4 mb-4">
           <MovieListHeading heading="Movies" />
