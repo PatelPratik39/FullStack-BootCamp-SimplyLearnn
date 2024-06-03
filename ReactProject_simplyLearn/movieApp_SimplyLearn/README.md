@@ -1,8 +1,14 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Streamify app
 
-Currently, two official plugins are available:
+- This is simple ReactJS app created using Vite. I have used open source ThirdParty API to get Movies data.
+- API : http://www.omdbapi.com/?s=hollywood&apikey=777276aa
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This App is simply fetches the Movie data from the API with actual posters.
+- I have used useState and UseEffect hooks.
+- for styling :  i have used Bootstrap
+- User can simply search for the movie using search field
+- user can add the movie as favourite Movie List
+- User can remove the moview from favourite Movie list
+- I have used localStorgae method to save the movie locally, so each refresh time saved movie wont get remove from list.

@@ -11,6 +11,7 @@ const MovieList = (props) => {
           className="col-md-3 col-sm-6 d-flex justify-content-center image-container"
         >
           <div className="movie-card p-3 m-3">
+            <h3>{props.Title}</h3>
             <img src={movie.Poster} alt="Movie" className="img-fluid" />
             <div
               className="overlay d-flex align-items-center justify-center"
