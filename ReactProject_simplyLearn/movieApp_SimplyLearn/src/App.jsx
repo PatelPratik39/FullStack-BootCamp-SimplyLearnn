@@ -9,7 +9,7 @@ import RemoveFavourite from "./components/RemoveFavourite";
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("jungle Book");
   const [favorites, setFavorites] = useState([]);
 
   const getMovieRequest = async (searchValue) => {
