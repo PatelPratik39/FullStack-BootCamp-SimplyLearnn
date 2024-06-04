@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getAllMovies } from "../api/api";
 import Movie from "./Movie";
+import { Container, Row, Col } from "react-bootstrap";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -21,13 +22,15 @@ const MovieList = () => {
 
   return (
     <>
-      <div>
-        {movies.length > 0 ? (
-          movies.map((movie) => <Movie movie={movie}/>)
-        ) : (
-          <li> No Movies are Found</li>
-        )}
-      </div>
+      <Container>
+        <Row>
+          {movies.map((movie) => (
+            <Col key={movie._id} sm={12} md={6} lg={4} xl={3}>
+              <Movie movie={movie} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </>
   );
 };

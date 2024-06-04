@@ -1,0 +1,22 @@
+/* App.css */
+.movie-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card-img {
+  flex: 1 1 auto;
+  object-fit: cover;
+  height: 300px; /* Set a fixed height for the image */
+}
+
+.movie-card .card-body {
+  flex: 0 1 auto;
+}
