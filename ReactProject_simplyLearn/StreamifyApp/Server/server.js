@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const DB_Connection = require("./Database/db");
 const movieRouter = require("./Controller/MoviesController");
+const authRouter = require("./Controller/authController");
 
 // Load environment variables from .env file
 dotenv.config();
@@ -25,6 +26,7 @@ DB_Connection();
 
 // Define routes
 app.use("/api/movies", movieRouter);
+app.use("/api/auth", authRouter);
 
 app.listen(PORT, () => {
   console.log(`StreamiFy App is listening on PORT: ${PORT}`);
