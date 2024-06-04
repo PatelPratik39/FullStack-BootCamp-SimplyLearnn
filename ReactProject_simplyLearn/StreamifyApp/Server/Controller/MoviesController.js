@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const Movie = require("../Model/Movies");
+const authMiddleware = require("../Middleware/authMiddleware");
 
 // @Route - POST /api/movies
 // @Desc - Add a Movie
-// @access public
-router.post("/", async (req, res) => {
+// @access PROTECTED
+router.post("/", authMiddleware, async (req, res) => {
   try {
     if (Array.isArray(req.body)) {
       const movies = await Movie.insertMany(req.body);
@@ -54,8 +55,8 @@ router.get("/", async (req, res) => {
 
 // @Route - GET /api/movies/:id
 // @DESC - Get single movie by Id
-// @access - public
-router.get("/:id", async (req, res) => {
+// @access - PROTECTED
+router.get("/:id", authMiddleware, async (req, res) => {
   try {
     const singleMovie = await Movie.findById(req.params.id);
     if (!singleMovie) {
@@ -75,8 +76,8 @@ router.get("/:id", async (req, res) => {
 
 // @Route - PUT /api/movies/:id
 // @DESC - update single movie by Id
-// @access - public
-router.put("/:id", async (req, res) => {
+// @access - PROTECTED
+router.put("/:id", authMiddleware, async (req, res) => {
   try {
     const movieId = req.params.id;
     const updatedMovie = await Movie.findByIdAndUpdate(movieId, req.body, {
@@ -101,8 +102,8 @@ router.put("/:id", async (req, res) => {
 
 // @Route - DELETE api/movie/:id
 // @DESC - DELETE Movie by ID
-// @access - public
-router.delete("/:id", async (req, res) => {
+// @access - PROTECTED
+router.delete("/:id", authMiddleware, async (req, res) => {
   try {
     const movieId = req.params.id;
     const deletedMovie = await Movie.findByIdAndDelete(movieId);
