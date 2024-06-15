@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// Below code is similir like java that we add Annotation
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
