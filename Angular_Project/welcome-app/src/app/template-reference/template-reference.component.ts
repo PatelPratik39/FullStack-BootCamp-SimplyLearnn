@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./template-reference.component.css']
 })
 export class TemplateReferenceComponent {
- message: string = ""
+ message: string = "";
+ messageColor: string = '';
 
 passValue (nameRef: any) : void {
   let name: string = nameRef.value
@@ -19,8 +20,10 @@ checkUser(a: any, b: any):  void {
 
   if(emailId == "chandu@email.com" && passowrd == "123"){
     this.message = "success"
+    this.messageColor = 'green'
   } else {
     this.message = "failure"
+    this.messageColor = 'red'
   }
   a.value=""    // we want reset value in text field 
   b.value=""

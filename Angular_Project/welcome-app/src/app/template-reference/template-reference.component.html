@@ -19,5 +19,5 @@
         <input type="button" value="submit" (click)="checkUser(emailidref,passref)"/>
     </form> -->
     <br/>
-    <span style="color: red">{{message}}</span>
+    <span [style.color]="messageColor">{{ message }}</span>
 </div>
