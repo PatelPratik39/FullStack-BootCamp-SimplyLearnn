@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TwoWayDataBindingComponent {
 
+  salary: number = 39000
+  age: number = 33
+
 }
