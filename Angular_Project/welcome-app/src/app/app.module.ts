@@ -11,6 +11,10 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { AngularFormsComponent } from './angular-forms/angular-forms.component';
+import { TemplateReferenceComponent } from './template-reference/template-reference.component';
+import { TdfLoginComponent } from './tdf-login/tdf-login.component';
+import { ModelDrivenLoginComponent } from './model-driven-login/model-driven-login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { FormsModule } from '@angular/forms';
     StringInterpolationComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    TwoWayDataBindingComponent
+    TwoWayDataBindingComponent,
+    AngularFormsComponent,
+    TemplateReferenceComponent,
+    TdfLoginComponent,
+    ModelDrivenLoginComponent
   ],
   imports: [
     BrowserModule,FormsModule
