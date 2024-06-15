@@ -1,0 +1,20 @@
+<div>
+  <h3>One Way to Vind data using Property Binding</h3>
+  <input type="text" /><br />
+  <input type="text" name="full Name" /><br />
+  <input type="text" name="full Name" value="Chandu Champion" /><br />
+
+  <input type="text" name="full Name" value="fname" /><br />
+  <input type="text" name="full Name" [value]="fname" /><br />
+  <p [innerText]="fname"></p>
+  {{ fname }}
+  <input type="button" value="click Me" /> ---
+  <input type="button" value="click Me" disabled /> ---
+  <input type="button" value="click Me" disabled="{{ flag }}" /> ---
+  <input type="button" value="click Me" [disabled]="flag" />
+</div>
+
+<!-- 
+String Interpolation contains only Streing values using  {{}}
+Property binding is applied on property key using  []
+-->

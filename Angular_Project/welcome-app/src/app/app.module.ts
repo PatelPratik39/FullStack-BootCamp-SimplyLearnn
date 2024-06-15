@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
     MainComponent,
     FooterComponent,
     DataBindingComponent,
-    StringInterpolationComponent
+    StringInterpolationComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule
