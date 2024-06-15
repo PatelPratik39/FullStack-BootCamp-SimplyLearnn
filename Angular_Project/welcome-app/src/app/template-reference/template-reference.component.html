@@ -1,1 +1,23 @@
-<p>template-reference works!</p>
+<div>
+    <h3> Template Reference </h3>
+    Name : <input type="text" #nameRef /> <br/>
+    <input type="button" value="Click Me" (click)="passValue(nameRef)" />
+    <br/>
+<hr/>
+    <form>
+        <label>Email Id :</label>
+        <input type="email" #emailidRef /><br/>
+        <label>Password :</label>
+        <input type="password" #passwordRef /> <br/>
+        <input type="button" value="submit" (click)="checkUser(emailidRef, passwordRef)" />
+    </form>
+    <!-- <form>
+        <label>EmailId</label>
+        <input type="email" #emailidref/><br/>
+        <label>Password</label>
+        <input type="password" #passref/><br/>
+        <input type="button" value="submit" (click)="checkUser(emailidref,passref)"/>
+    </form> -->
+    <br/>
+    <span style="color: red">{{message}}</span>
+</div>
