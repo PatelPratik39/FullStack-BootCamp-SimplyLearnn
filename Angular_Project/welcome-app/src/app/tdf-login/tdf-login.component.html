@@ -1,1 +1,11 @@
-<p>tdf-login works!</p>
+<div>
+  <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
+    <label> Email : </label>
+    <input type="email" name="emailId" ngModel/><br />
+    <label> Password : </label>
+    <input type="password" name="password" ngModel/><br />
+    <input type="submit" value="submit" /> &nbsp;
+    <input type="reset" value="reset" />
+  </form><br/>
+   <span [style.color]="messageColor">{{ message }}</span>
+</div>
