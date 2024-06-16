@@ -1,4 +1,11 @@
 <div>
-    <h3> Consume Fake Service</h3>
-    <input type="button" value="Click Me" (click)="loadFakeData()"/>
+    <h3>Consume Fake Service</h3>
+    <input type="button" value="Click Here" (click)="loadFakeData()"/>
+    <br/>
+    <div *ngFor="let fake of fakeInfo">
+        <span>
+            <img [src]="fake.image" width="200px" height="200px"/>    
+            {{fake.id}} -  {{fake.name}} {{fake.price}}
+        </span>
+    </div>
 </div>

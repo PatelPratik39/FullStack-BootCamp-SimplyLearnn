@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Fake } from './fake';
 
 
 @Injectable({
@@ -24,5 +26,10 @@ export class FakeService {
           
       },
     })
+  }
+
+
+  loadFakeServiceInfo():Observable<Fake[]>{
+    return this.http.get<Fake[]>("https://freetestapi.com/api/v1/products");
   }
 }
