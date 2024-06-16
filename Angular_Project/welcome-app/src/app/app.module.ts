@@ -17,6 +17,8 @@ import { TdfLoginComponent } from './tdf-login/tdf-login.component';
 import { ModelDrivenLoginComponent } from './model-driven-login/model-driven-login.component';
 import { LogingService } from './login.service';
 import { FakeComponent } from './fake/fake.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FakeService } from './fake.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { FakeComponent } from './fake/fake.component';
     FakeComponent
   ],
   imports: [
-    BrowserModule,FormsModule, ReactiveFormsModule
+    BrowserModule,FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [LogingService],
   bootstrap: [AppComponent]
