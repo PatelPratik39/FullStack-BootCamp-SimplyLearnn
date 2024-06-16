@@ -1,5 +1,5 @@
 {
-  "name": "angulr-app-with-all-topics",
+  "name": "task-manager",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

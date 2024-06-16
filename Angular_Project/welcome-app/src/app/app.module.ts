@@ -16,6 +16,7 @@ import { TemplateReferenceComponent } from './template-reference/template-refere
 import { TdfLoginComponent } from './tdf-login/tdf-login.component';
 import { ModelDrivenLoginComponent } from './model-driven-login/model-driven-login.component';
 import { LogingService } from './login.service';
+import { FakeComponent } from './fake/fake.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LogingService } from './login.service';
     AngularFormsComponent,
     TemplateReferenceComponent,
     TdfLoginComponent,
-    ModelDrivenLoginComponent
+    ModelDrivenLoginComponent,
+    FakeComponent
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule
