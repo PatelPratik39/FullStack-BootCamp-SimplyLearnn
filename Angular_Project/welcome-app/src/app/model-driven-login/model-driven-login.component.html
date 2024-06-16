@@ -1,1 +1,13 @@
-<p>model-driven-login works!</p>
+<div>
+  <h2>Login Form</h2>
+  <form [formGroup]="loginRef" (ngSubmit)="checkUser()">
+    <label> Email Id :</label>
+    <input type="email" formControlName="emailId" /><br />
+    <label> Password :</label>
+    <input type="password" formControlName="password" /><br />
+    <input type="submit" value="sumit" />
+    <input type="reset" value="reset" />
+  </form>
+  <span [style.color]="messageColor">{{message}}</span>
+</div>
+<!-- <span [style.color]="messageColor">{{ message }}</span> -->

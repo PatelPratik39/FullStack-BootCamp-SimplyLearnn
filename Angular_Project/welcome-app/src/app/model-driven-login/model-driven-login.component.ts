@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-model-driven-login',
@@ -7,4 +8,22 @@ import { Component } from '@angular/core';
 })
 export class ModelDrivenLoginComponent {
 
+  loginRef = new FormGroup({
+    emailId: new FormControl(),
+    password: new FormControl()
+  })
+  message:string = "";
+  messageColor: string = ""
+
+  checkUser(): void{
+    let login = this.loginRef.value;
+    if(login.emailId == 'chandu@email.com' && login.password == "123"){
+      this.message="successfully Login"
+      this.messageColor = "green"
+    } else {
+       this.message = "Failed Login"
+       this.messageColor = "red"
+    }
+    this.loginRef.reset();
+  }
 }
