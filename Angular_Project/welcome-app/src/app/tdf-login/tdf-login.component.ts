@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Myservice } from '../custom.service';
+import { LogingService } from '../login.service';
 
 @Component({
   selector: 'app-tdf-login',
@@ -11,6 +12,10 @@ export class TdfLoginComponent {
 
   message: string = "";
   messageColor:  string = "";
+
+  constructor(public ls: LogingService){
+
+  }
 
   checkUser(loginRef: NgForm) : void {
     // alert("Form submitted");
@@ -28,8 +33,9 @@ export class TdfLoginComponent {
     //   this.messageColor = "red";
     //   alert(`Error: Login Failed for ${login.emailId}.`);
     // }
-    let obj = new Myservice();
-    this.message = obj.checkUserInfo(login);
+    // let obj = new Myservice();
+    // this.message = obj.checkUserInfo(login);
+    this.message = this.ls.checkUserInfo(login)
     loginRef.reset();
   }
 
