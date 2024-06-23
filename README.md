@@ -13,4 +13,3 @@
         - full()   -> stack Overfkow
     # Tree
         - Tree Data Structure is not a linear data structure
-        - Binary Tree:  a tree is 
