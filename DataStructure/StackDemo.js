@@ -7,15 +7,16 @@ class Stack {
       this.array.push(element); //need to wright the code to add element
       console.log("Add Push successfully");
     } else {
-      this.array.push();
+      console.log("Stack Ovrflow");
     }
   }
 
   pop() {
+    // it remove from stack ie top most element.
     if (this.array.length == 0) {
-      console.log("Stack is empty or undefined");
+      return "Stack is empty or Underflow";
     } else {
-      this.array.pop(); // remove top most element from array
+      return this.array.pop(); // remove top most element from array.
     }
   }
   peek() {
@@ -43,3 +44,17 @@ class Stack {
     }
   }
 }
+
+let ss = new Stack();
+console.log("empty : " + ss.isEmpty());
+console.log("Pop " + ss.pop());
+ss.push(100);
+ss.push(200);
+ss.push(300);
+ss.push(400);
+ss.push(500);
+ss.push(600);
+ss.push(700);
+console.log("Pop " + ss.pop());
+console.log("Pop " + ss.pop());
+console.log("Pop " + ss.peek());
