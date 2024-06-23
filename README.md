@@ -11,3 +11,6 @@
         - peek() -> retrieve top element or data not remove
         - isEmpty() -> stack is empty
         - full()   -> stack Overfkow
+    # Tree
+        - Tree Data Structure is not a linear data structure
+        - Binary Tree:  a tree is 
