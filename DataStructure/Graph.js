@@ -64,6 +64,17 @@ class Graph {
       this.adjacenctList[city2].push({ city: city1, distance: distance });
     }
   }
+
+  pringGraph(){
+    console.log("City Connection details");
+
+    for(let city in this.adjacenctList){
+        // console.log(city);
+        let connection = this.adjacenctList[city].map(obj => " connected to "+ obj.city+ " Distance is " + obj.distance + " miles");
+        console.log(city + " -> " +connection)
+        console.log(' ');
+    }
+  }
 }
 
 let graph = new Graph();
@@ -86,3 +97,4 @@ graph.addConnection("Phoenix", "New York", 800);
 graph.addConnection("Chicago", "Phoenix", 400);
 
 console.log(graph.adjacenctList);
+graph.pringGraph()
