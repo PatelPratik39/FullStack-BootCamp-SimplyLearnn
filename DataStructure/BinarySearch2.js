@@ -5,7 +5,9 @@ arr.sort((a, b) => a - b);
 
 const result = binarySearch(arr, target);
 console.log(
-  result !== -1 ? `Element found at index ${result}` : "Element not found"
+  result !== -1
+    ? `Element ${target} present in position as ${result}`
+    : "Element not found"
 );
 
 function binarySearch(arr, target){
