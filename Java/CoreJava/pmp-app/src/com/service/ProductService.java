@@ -30,16 +30,70 @@ public class ProductService {
 			flag = 0;
 			return "Product added successfully" ;
 		}
-		
 	}
-	public String deleteProduct(Product pid) {
-		return null;
+	public String deleteProduct(int pid) {
+		int flag =0;	
+			Iterator<Product> li = listOfProduct.iterator();
+			while(li.hasNext()) {
+				Product p = li.next();
+				if(p.getPid() == pid) {
+					li.remove();
+					flag++;
+					break;
+				}
+			}
+
+		if(flag > 0) {
+			flag = 0;
+			return " Product details remove successfully ";
+		} else {
+			
+			return "Product is not present" ;
+		}
 	}
 	public String updateProduct(Product product) {
-		return null;
+		int flag = 0;
+		
+		Iterator<Product> li = listOfProduct.iterator();
+		while(li.hasNext()) {
+			Product p = li.next();
+			if(p.getPid()==product.getPid()) {
+				p.setPrice(product.getPrice());   // new price replace 
+				//p.setPrice(p.getPrice()+product.getPrice());
+				flag++;
+				break;
+			}
+		}
+		if(flag>0) {
+			flag =0;
+			return "Product price updated successfully";
+		}else {
+			return "Product not present";
+		}
+		
+	}
+	
+	public String findPriceById(int pid) {
+		int flag=0;
+
+		Iterator<Product> li = listOfProduct.iterator();
+		while(li.hasNext()) {
+			Product p = li.next();
+			if(p.getPid()==pid) {
+				flag++;
+				return "Your product price is "+p.getPrice();
+			}
+		}
+
+	if(flag==0) {
+		return "Product not preset";
+	}
+
+	return null;
+
 	}
 	public List<Product> retrieveProduct() {
-		return null;
+		return listOfProduct;
 	}
 
 }
