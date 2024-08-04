@@ -1,6 +1,7 @@
 package com;
 
 import java.sql.*;
+import java.util.Scanner;
 
 public class JdbcTestDemo {
 
@@ -48,18 +49,36 @@ public class JdbcTestDemo {
 			 * RETREIVE QUERY
 			 */
 			
-			ResultSet rs = stmt.executeQuery("select * from employee");
-			while(rs.next()) {
-				System.out.println("id is " + rs.getInt(1) + " name is " + rs.getString(3) + " Salary "+ rs.getFloat(3));
+//			ResultSet rs = stmt.executeQuery("select * from employee");
+//			while(rs.next()) {
+//				System.out.println("id is " + rs.getInt(1) + " name is " + rs.getString(3) + " Salary "+ rs.getFloat(3));
+//			}
+//			rs.close();
+//			stmt.close(); 
+			
+			Scanner sc = new Scanner(System.in);
+			// insert record using PreparedStatement 
+			PreparedStatement pstmt = connection.prepareStatement("insert into employee values(?,?,?)");
+			System.out.println("Enter the id");
+			int id  = sc.nextInt();
+				pstmt.setInt(1, id);
+			
+			System.out.println("Enter the name");
+			String name= sc.next();
+				pstmt.setString(2, name);
+			
+			System.out.println("Enter the salary");
+			float salary  = sc.nextFloat();
+				pstmt.setFloat(3, salary);
+			
+			int result = pstmt.executeUpdate();
+			if(result>0) {
+				System.out.println("Record inserted...");
 			}
-			rs.close();
-			stmt.close(); 
-			
 			connection.close();
-			
-		}catch(Exception e) {
-			System.err.println(e);
-		}
+			} catch (Exception e) {
+				System.err.println(e);
+			}
 
 	}
 
