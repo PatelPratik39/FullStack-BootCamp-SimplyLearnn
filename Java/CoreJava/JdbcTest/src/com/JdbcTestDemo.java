@@ -37,12 +37,22 @@ public class JdbcTestDemo {
 			 * Update Query
 			 */
 			
-			int result = stmt.executeUpdate("Update employee set salary= 35000 where id = 7");
-			if(result > 0) {
-				System.out.println("Record Updated Successfully");
-			} else {
-				System.out.println("Record Not Present!!");
+//			int result = stmt.executeUpdate("Update employee set salary= 35000 where id = 7");
+//			if(result > 0) {
+//				System.out.println("Record Updated Successfully");
+//			} else {
+//				System.out.println("Record Not Present!!");
+//			}
+//			
+			/*
+			 * RETREIVE QUERY
+			 */
+			
+			ResultSet rs = stmt.executeQuery("select * from employee");
+			while(rs.next()) {
+				System.out.println("id is " + rs.getInt(1) + " name is " + rs.getString(3) + " Salary "+ rs.getFloat(3));
 			}
+			rs.close();
 			stmt.close(); 
 			
 			connection.close();
