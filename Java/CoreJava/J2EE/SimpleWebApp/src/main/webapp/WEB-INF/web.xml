@@ -18,11 +18,21 @@
     <url-pattern>/demo</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>SignInServlet</servlet-name>
+    <servlet-name>SignIn</servlet-name>
     <servlet-class>com.SignIn</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SignInServlet</servlet-name>
-    <url-pattern>/signin</url-pattern>
+    <servlet-name>SignIn</servlet-name>
+    <url-pattern>/SignIn</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Home</display-name>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>com.Home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home</url-pattern>
   </servlet-mapping>
 </web-app>
