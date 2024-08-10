@@ -56,25 +56,74 @@ public class JdbcTestDemo {
 //			rs.close();
 //			stmt.close(); 
 			
+//			Scanner sc = new Scanner(System.in);
+//			// insert record using PreparedStatement 
+//			PreparedStatement pstmt = connection.prepareStatement("insert into employee values(?,?,?)");
+//			System.out.println("Enter the id");
+//			int id  = sc.nextInt();
+//				pstmt.setInt(1, id);
+//			
+//			System.out.println("Enter the name");
+//			String name= sc.next();
+//				pstmt.setString(2, name);
+//			
+//			System.out.println("Enter the salary");
+//			float salary  = sc.nextFloat();
+//				pstmt.setFloat(3, salary);
+//			
+//			int result = pstmt.executeUpdate();
+			
+			
+//			Scanner sc = new Scanner(System.in);
+			// delete record using PreparedStatement 
+//			PreparedStatement pstmt = connection.prepareStatement("delete from employee where id = ?");
+//			System.out.println("Enter the id");
+//			int id  = sc.nextInt();
+//				pstmt.setInt(1, id);
+			
+//			System.out.println("Enter the name");
+//			String name= sc.next();
+//				pstmt.setString(2, name);
+//			
+//			System.out.println("Enter the salary");
+//			float salary  = sc.nextFloat();
+//				pstmt.setFloat(3, salary);
+			
+			
 			Scanner sc = new Scanner(System.in);
-			// insert record using PreparedStatement 
-			PreparedStatement pstmt = connection.prepareStatement("insert into employee values(?,?,?)");
-			System.out.println("Enter the id");
-			int id  = sc.nextInt();
-				pstmt.setInt(1, id);
+			// Update record using PreparedStatement 
+//			PreparedStatement pstmt = connection.prepareStatement("Update employee set salary =? where id =?");
+//			System.out.println("Enter the id");
+//			int id  = sc.nextInt();
+////				pstmt.setInt(1, id);
+//			
+//			System.out.println("Update the salary");
+//			float salary  = sc.nextFloat();
+//			
+//			pstmt.setFloat(1, salary);
+//			pstmt.setInt(2, id);
+//			
+//			int result = pstmt.executeUpdate();
+//			
+//			if(result>0) {
+//				System.out.println("Record Updated...");
+//			}
 			
-			System.out.println("Enter the name");
-			String name= sc.next();
-				pstmt.setString(2, name);
+			//Retrieve with prepared statement with condition
 			
-			System.out.println("Enter the salary");
-			float salary  = sc.nextFloat();
-				pstmt.setFloat(3, salary);
+			PreparedStatement pstmt = connection.prepareStatement("select * from employee where salary  > ?");
+			System.out.println("Please Enter the Salary ");
+			float salary = sc.nextFloat();
+			pstmt.setFloat(1, salary);
 			
-			int result = pstmt.executeUpdate();
-			if(result>0) {
-				System.out.println("Record inserted...");
+			ResultSet resultSet = pstmt.executeQuery();
+			
+			while(resultSet.next()) {
+				System.out.println("id is "+resultSet.getInt(1)+" Name is "+resultSet.getString(2)+" Salary is "+resultSet.getFloat(3));
 			}
+			resultSet.close();
+			pstmt.close();
+			
 			connection.close();
 			} catch (Exception e) {
 				System.err.println(e);
