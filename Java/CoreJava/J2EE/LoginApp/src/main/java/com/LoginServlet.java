@@ -50,6 +50,7 @@ public class LoginServlet extends HttpServlet {
 			pstmt.setString(2, password);
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {
+				request.setAttribute("user", emailid);
 				rd1.forward(request, response);
 			}else {
 				pw.println("Failure try once again!");
