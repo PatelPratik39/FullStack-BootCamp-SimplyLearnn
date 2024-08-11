@@ -8,12 +8,12 @@
 </head>
 <body>
 <h2>Login Page</h2>
-<form action="checkuser.jsp" method="post">
+<form action="checkUser.jsp" method="post">
 	<label>EmailId</label>
 	<input type="email" name="emailid"/><br/>
 	<label>Password</label>
 	<input type="password" name="password"/><br/>
-	<input type="submit" value="SignIn"/>
+	<input type="submit" value="Login"/>
 	<input type="reset" value="reset"/>
 </form>
 </body>
