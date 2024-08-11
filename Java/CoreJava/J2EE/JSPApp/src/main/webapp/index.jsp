@@ -9,8 +9,12 @@
 <body>
 	<p>Welcome to HTML Web Page <p/>
 <%
-	System.out.println("Welcome to JSP on console");
-	out.println("Welcome to JSP");
+	int a= 10;
+	int b = 20;
+	int sum = a + b;
+	System.out.println("Welcome to JSP on console.. ");
+	out.println("Welcome to JSP..");
+	out.println("Sum of two Numbers is " + sum);
 %>
 </body>
 </html>
