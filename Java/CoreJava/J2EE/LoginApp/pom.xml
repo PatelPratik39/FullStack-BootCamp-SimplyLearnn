@@ -4,13 +4,24 @@
   <artifactId>LoginApp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  
+  <dependencies>
+
+	<dependency>
+	    <groupId>com.mysql</groupId>
+	    <artifactId>mysql-connector-j</artifactId>
+	    <version>9.0.0</version>
+	</dependency>
+
+  </dependencies>
+  
   <build>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <release>22</release>
+          <release>11</release>
         </configuration>
       </plugin>
       <plugin>
