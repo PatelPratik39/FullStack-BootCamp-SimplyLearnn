@@ -16,5 +16,21 @@ public class ProductService {
 			return "Product details didn't store";
 		}
 	}
+	
+	public String deleteProduct(int pid) {
+		if(pd.deleteProduct(pid) > 0) {
+			return "Delete Successfully " + pid;
+		} else {
+			return "Product is not present";
+		}
+	}
+	
+	public String updateProduct(Product product) {
+		if(pd.updateProduct(product)>0) {
+			return "Product price updated successfully";
+		}else {
+			return "Product not present";
+		}
+	}
 
 }

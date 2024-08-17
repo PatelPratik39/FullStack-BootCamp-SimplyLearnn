@@ -9,6 +9,13 @@
 <body>
 <h2> Delete Product</h2>
 
+<form action="ProductDeleteController" method="post">
+	<label>PId</label>
+	<input type="number" name="pid"/><br/>
+	
+	<input type="submit" value="Delete Product"/>
+	<input type="reset" value="reset"/>
+</form>
 
 
 <a href="index.html">Back</a>
