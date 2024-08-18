@@ -50,6 +50,7 @@ public class DemoTest extends HttpServlet {
 		pw.println("<br/>session default time = "+hs.getMaxInactiveInterval());
 		hs.setMaxInactiveInterval(600);
 		pw.println("<br/>session set custom time = "+hs.getMaxInactiveInterval());
+		
 		if(count%5==0) {
 			hs.invalidate();
 		}
