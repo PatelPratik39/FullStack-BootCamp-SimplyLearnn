@@ -38,8 +38,3 @@ public class Batch {
     }
 }
 
-// Enum declaration for TimeSlot
-enum TimeSlot {
-    MORNING,
-    EVENING
-}
