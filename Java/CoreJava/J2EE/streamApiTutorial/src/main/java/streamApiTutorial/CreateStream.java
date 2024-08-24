@@ -64,6 +64,13 @@ public class CreateStream {
 		
 //		Finding and Matching
 		
+//		Optional<String> name = names.stream().findAny();
+//		System.out.println(name);
+		boolean findName = names.stream().anyMatch(name -> name.startsWith("M"));
+		System.out.println(findName);
+		
+		boolean findName1 = names.stream().anyMatch(name -> name.endsWith("o"));
+		System.out.println(findName1);
 		
 
 	}
