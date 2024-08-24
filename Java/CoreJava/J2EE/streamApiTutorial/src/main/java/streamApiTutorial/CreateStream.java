@@ -2,6 +2,7 @@ package streamApiTutorial;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class CreateStream {
@@ -86,7 +87,27 @@ public class CreateStream {
 //		Grouping and Partitioning
 		Map<Integer , List<String>> groupedByLength = names.stream().collect(Collectors.groupingBy(String :: length));
 		System.out.println(groupedByLength);
+		System.out.println();
+		
+		Map<Boolean, List<String>> partitioned = names.stream().collect(Collectors.partitioningBy(name -> name.length() > 4));
+		System.out.println(partitioned);
+		System.out.println();
+		
+		/**
+		 *  11. Parallel Stream
+		 */
+		
+		List<String> uppercaseName = names.parallelStream().map(String :: toUpperCase).collect(Collectors.toList());
+		System.out.println(uppercaseName);
+		
+		/**
+		 *  12. Primitive Streams
+		 */
+		
+		List<Integer> num = IntStream.range(1, 5).boxed().collect(Collectors.toList());
+		System.out.println(num);
 
+		
 	}
 
 }
