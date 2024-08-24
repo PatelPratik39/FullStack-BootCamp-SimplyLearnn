@@ -83,7 +83,9 @@ public class CreateStream {
 		Set<String> set = names.stream().collect(Collectors.toSet());
 		System.out.println(set);
 
-		
+//		Grouping and Partitioning
+		Map<Integer , List<String>> groupedByLength = names.stream().collect(Collectors.groupingBy(String :: length));
+		System.out.println(groupedByLength);
 
 	}
 
