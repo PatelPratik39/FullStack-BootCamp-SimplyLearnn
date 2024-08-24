@@ -28,10 +28,12 @@ public class LambdaOperation {
 		Info obj1 = (name) -> System.out.println("Welcome User " + name);
 		obj1.greeting("MaganLal");
 		
-		Info obj2 = (String name) -> {
+		Info obj2 = (var name) -> {
 			System.out.println("Welcome user with multi line statmenmt " + name);
 		};
 		obj2.greeting("Mangoo");
+		var a = 10;   //Declaring generic type of variable.
+//		a = "Lasanlala";
 		
 	}
 
