@@ -111,15 +111,29 @@ public class CreateStream {
 		System.out.println(num);
 		
 		/**
-		 * Working with Files using Streams
+		 * 13.  Working with Files using Streams
 		 */
 		
-		try(Stream<String> lines = Files.lines(Paths.get("file.txt"))){
-			lines.forEach(System.out::println);
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
+//		try(Stream<String> lines = Files.lines(Paths.get("file.txt"))){
+//			lines.forEach(System.out::println);
+//		} catch(IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+		/**
+		 * 14. Error handling in Streams
+		 */
+		List<Integer> numbers = Arrays.asList(1,2,88,12,16,29,3,4,5,6,7,8,9);
 		
+		List<Integer> result1 = numbers.stream().map(n -> {
+			try {
+				return 10 / n;
+			} catch(ArithmeticException e) {
+				return 0;
+			}
+		}).collect(Collectors.toList());
+		
+		System.out.println(result1);
 
 		
 	}
