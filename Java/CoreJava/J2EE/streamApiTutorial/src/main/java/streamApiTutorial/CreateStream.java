@@ -1,5 +1,8 @@
 package streamApiTutorial;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -106,6 +109,17 @@ public class CreateStream {
 		
 		List<Integer> num = IntStream.range(1, 5).boxed().collect(Collectors.toList());
 		System.out.println(num);
+		
+		/**
+		 * Working with Files using Streams
+		 */
+		
+		try(Stream<String> lines = Files.lines(Paths.get("file.txt"))){
+			lines.forEach(System.out::println);
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
 
 		
 	}
