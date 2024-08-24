@@ -72,6 +72,18 @@ public class CreateStream {
 		boolean findName1 = names.stream().anyMatch(name -> name.endsWith("o"));
 		System.out.println(findName1);
 		
+//		Reducing
+		
+		int sum = marks.stream().reduce(0, Integer:: sum);
+		System.out.println(sum);
+		
+//		Collecting results
+		List<String> list = names.stream().collect(Collectors.toList());
+		System.out.println(list);
+		Set<String> set = names.stream().collect(Collectors.toSet());
+		System.out.println(set);
+
+		
 
 	}
 
