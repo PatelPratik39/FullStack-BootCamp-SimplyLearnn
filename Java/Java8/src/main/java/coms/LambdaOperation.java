@@ -5,6 +5,7 @@ interface Operation {
 	public int add(int x, int y);
 }
 
+@FunctionalInterface
 interface Info{
 	public void greeting(String name);
 }
