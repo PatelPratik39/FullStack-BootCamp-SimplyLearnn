@@ -8,6 +8,7 @@ public class SpringBootSimpleWebAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootSimpleWebAppApplication.class, args);
+		System.out.println("Spring boot is up and running ");
 	}
 
 }
